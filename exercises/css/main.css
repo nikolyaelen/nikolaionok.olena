@@ -1,0 +1,10 @@
+/*reset.css файл, має бути першим, що побачить браузер*/
+* {
+    margin: 0;
+    padding: 0;
+   }
+   
+body {
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+}
