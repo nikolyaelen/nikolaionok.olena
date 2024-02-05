@@ -1,0 +1,19 @@
+h1, h2, h3 {
+    color: gray;
+}
+
+main {
+    --mainColor: #e60202;
+}
+
+#main {
+    color: var(--mainColor);
+}
+
+.h2 {
+    color: red;
+}
+
+.heading {
+    color: green;
+}
