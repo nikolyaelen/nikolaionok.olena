@@ -1,19 +1,36 @@
 h1, h2, h3 {
     color: gray;
 }
-
 main {
     --mainColor: #e60202;
 }
-
 #main {
     color: var(--mainColor);
 }
-
 .h2 {
     color: red;
 }
-
 .heading {
     color: green;
+}
+ul > li {
+    font-weight: bold;
+}
+section > p {
+    color: red;
+}
+section p {
+    font-size: 20px;
+}
+div #color {
+    color: indigo;
+}
+p a {
+    color: green;
+}
+p a {
+    text-shadow: 1px 1px gray
+}
+.greet + div {
+    color: salmon;
 }
