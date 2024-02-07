@@ -20,7 +20,7 @@ section > p {
     color: red;
 }
 section p {
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 div #color {
     color: indigo;
@@ -29,8 +29,11 @@ p a {
     color: green;
 }
 p a {
-    text-shadow: 1px 1px gray
+    font-style: italic;
 }
 .greet + div {
     color: salmon;
+}
+.translucent-box {
+    background-color: hsl(0,100%,50%);
 }
