@@ -2,7 +2,18 @@
     --primary-text-color: #000;
     --primary-bg-color: #fff;
 }
+body{
+    font-family: "Roboto", sans-serif;
+}
+html {
+    font-size: 0.875rem;
+    --primary-text-color: #000;
+    --primary-bg-color: #fff;
+}
 footer {
     --footer-text-color: #000;
     --footer-bg-color: #fff;
+}
+a {
+    text-decoration: none;
 }
