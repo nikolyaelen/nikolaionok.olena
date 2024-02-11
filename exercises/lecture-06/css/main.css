@@ -1,0 +1,67 @@
+a {
+    color: indigo;
+}
+a:visited {
+    color: gold;
+}
+a:hover {
+    color: salmon;
+}
+a:active {
+    color: red;
+}
+a:focus {
+    color: orange;
+}
+/*поле ел. input*/
+input:in-range {
+    background-color: rgba(0, 128, 0, 0.25);
+}
+input:out-of-range {
+    background-color: rgba(255, 0, 0, 0.25)
+}
+/*завдання №4 Встановіть першому елементу li помаранчевий колір*/
+ul :first-child {
+    color: orange;
+}
+/*завдання №5 Встановіть першому елементу li та першому елементу span помаранчевий колір*/
+ul :first-of-type {
+    color: orange;
+}
+/*завдання №6 Встановіть останньому елементу li та останньому елементу span помаранчевий колір*/
+ul :last-of-type {
+    color: orange;
+}
+/*завдання №7 Встановіть елементу li помаранчевий колір, якщо він не має аргумента class="first-item"*/
+ul :not(.first-item) {
+    color: orange;
+}
+/*Встановіть всім елементаи li чорний текст і жовтий фон, крім елемента li з класом .first-item та останнього елемента li у списку*/
+ul :not(.first-item):not(:last-of-type) {
+    color: black;
+    background: yellow;
+}
+/*завдання №8 Встановіть другому елементу li помаранчевий колір*/
+ol :nth-child(2) {
+    color: orange;
+}
+/*Встановіть кожному парному елементу li помаранчевий колір*/
+ol :nth-child(2n) {
+    color: orange;
+}
+/*Встановіть кожному елементу li помаранчевий колір за формулою 2n+6*/
+ol :nth-child(2n+6) {
+    color: orange;
+}
+/*завдання №9 Вставте за допомогою псевдоелемента before перед Україні слово Слава*/
+h1.ua::before {
+    content: "Слава";
+}
+/*завдання №10 Вставте за допомогою псевдоелемента after після Героям слово Слава!*/
+h1.hero::after {
+    content: "Слава!";
+}/*завдання №11 Вставте за допомогою псевдоелемента before символ параграфу*/
+p::before {
+    content: "\0A7";
+    padding-right: 0.2em;
+}
