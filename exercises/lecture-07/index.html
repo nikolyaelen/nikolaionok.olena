@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <style>
+        .negative {
+            background: linear-gradient(to left, #b9d4fa -50%, #97bcfc -10%, #517af5 0%, #2517e6 100%, #020294 150%);
+            background-size: 200% auto;
+            padding: 10px;
+        }
+        .percents {
+            background: linear-gradient(to bottom, #99FE99 2em, #1DFE4A 4em, #04da20 8em, #07a302 16em, #02720b 32em, #014d1ec9 64em, #013816e5 128em);
+            background-size: 200% auto;
+            padding: 10px;
+        }
+        .radial {
+            background: radial-gradient(ellipse at top, #FF920A, rgba(255, 146, 10, 0)),
+                        radial-gradient(ellipse at bottom, #FF0000, rgba(255, 0, 0, 0));
+            background-size: 200%;
+            padding: 10px;
+        }
+
+
+    </style>
+   
+</head>
+<body class="body">
+
+    <h1>Gradient Text Glow</h1>
+
+    <div class="percents">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cum magnam quae adipisci minima illum porro eius ipsa rem. Sequi eaque facere necessitatibus fugiat rerum facilis reprehenderit numquam dignissimos itaque!
+    </div>
+
+    <div class="negative">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cum magnam quae adipisci minima illum porro eius ipsa rem. Sequi eaque facere necessitatibus fugiat rerum facilis reprehenderit numquam dignissimos itaque!
+    </div>
+
+    <div class="radial">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cum magnam quae adipisci minima illum porro eius ipsa rem. Sequi eaque facere necessitatibus fugiat rerum facilis reprehenderit numquam dignissimos itaque!
+    </div>
+
+<!-- Створити svg-прямокутник розміром 100х100 з координатами 20,20 20, 20. Для обрамлення встановити колір #1c87c9 та товщину лінії 4. Встановити фон прямокутника lightgray. -->
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="20" width="100" height="100" stroke= #1c87c9 fill="lightgray" stroke-width="4"/>
+    </svg>
+
+<!-- Створити svg-коло розміром 200х200 радіусом = 60 та центром з координатами 100, 70. Для обрамлення встановити червоний колір та товщину лінії 4. Встановити фон кола lightgray. -->
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="70" r="60" stroke="red" fill="lightgray" stroke-width="4"/>
+    </svg>
+
+<!-- Створити svg-малюнок годинника, що показує час = 3 години -->
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="70" r="60" stroke="black" fill="#FFFAFA" stroke-width="3"/>
+        <path d="M100 70 h 50 v " fill="black" stroke="black" stroke-width="2"/>
+        <path d="M100 70 v -50 h " fill="black" stroke="black" stroke-width="2"/>
+    </svg>
+
+<!-- Створити svg-малюнок зірки (не обов'язкове завдання) -->
+    <svg width="150" height="150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+        <path d="M15 2 l3 8 h9 l-7 5 3 8 -8 -5 -8 5 3 -8 -7 -5 h9 z" fill="white" stroke="orange" stroke-width="2"/>
+    </svg>
+
+</body>
+</html>
