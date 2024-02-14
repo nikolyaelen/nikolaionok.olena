@@ -3,13 +3,25 @@
     margin: 0;
     padding: 0;
    }*/
-   
-body {
-    --primary-font-family: "Roboto", sans-serif;
+/*Відредагувати файл css/main.css
+Встановити, за допомогою визначених у файлі css/common.css змінних, властивості елемента body:
+font-family
+font-size*/
+html {
+    --primary-text-color: #000;
+    --primary-bg-color: #fff;
+    --primary-font-family: 'Roboto', sans-serif;
     --primary-font-size: 0.875rem;
-    color: var(--primary-text-color);
-    background-color: var(--primary-bg-color);
+}   
+body {
+    font-family: var(--primary-font-family);
+    font-size: var(--primary-font-size);
 }
+/*Встановити властивість font-weight: 700 для елементів h1, h2, h3
+Встановити властивість font-size: 1.45rem для елемента h1
+Встановити властивість font-size: 1.3rem для елемента h2
+Визначити клас .list-unstyled з властивістю list-style: none
+Визначити клас .footer-social*/
 h1 {
     font-weight: 700;
     font-size: 1.45rem;
