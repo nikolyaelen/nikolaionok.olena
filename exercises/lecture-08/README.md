@@ -1,5 +1,6 @@
 #8 Блокова модель документа
-1. В середині exercises створіть піддиректорію lecture-08. В середині lecture-08 створіть файли index.html та README.md. Відредагуйте файл exercises/lecture-08/index.html
+1. В середині exercises створіть піддиректорію lecture-08. В середині lecture-08 створіть файли index.html та README.md.
+Відредагуйте файл exercises/lecture-08/index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 	<style>
-	.box { 
+	.box{ 
 		padding-top:    10px; 
 		padding-right:  20px; 
 		padding-bottom: 25px; 
@@ -17,6 +18,7 @@
 		margin-right:  20px; 
 		margin-bottom: 25px; 
 		margin-left:   20px;  
+
 	}
 	</style>
 </head>
@@ -26,9 +28,11 @@
 </html>
 - Перепишіть властивості padding та margin за допомогою скороченого синтаксу
 2. Обчислити ширину елемента .box
-<body>
-   <div class="box"></div>
-</body>
+.box{ 
+  width: 300px; 
+  padding: 10px; 
+  border: dashed 2px green;
+}
 .box{ 
   width: 300px; 
   padding: 10px; 
@@ -74,16 +78,16 @@ div{
 }
 7. Маємо таку розмітку:
 <style>
-  div {
-    border: 10px dotted black;
-    padding: 15px;
-    background: lightblue;
-  }
+div {
+  border: 10px dotted black;
+  padding: 15px;
+  background: lightblue;
+}
 </style>
 </head>
 <body>
   <div id="example1">
-    <p>Правило для example1: фон всередині елемента має простягатися за межі рамки.</p>
+    <p>Правило для example1: фон всередині елемента простягатися за межі рамки.</p>
   </div>
 
   <div id="example2">
