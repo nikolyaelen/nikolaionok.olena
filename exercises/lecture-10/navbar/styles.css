@@ -5,21 +5,25 @@
   body {
     margin: 0;
   }
-  
+/*завдання №2 а)Вирівняйте елементи навігаційної панелі по вертикалі так,
+                щоб вони мали однакову відстань зверху та знизу.
+              б)Вирівняйте елементи навігаційної панелі по горизонті так,
+                щоб Brand Name розташувався зліва, а пункти меню - справа.*/
   .nav {
     background-color: #333;
     color: white;
     display: flex;
-    
+    justify-content: space-between;
+    align-items: center;
     padding: 0 .5rem;
   }
-  
+
   .link-list {
     display: flex;
     margin: 0;
     list-style: none;
   }
-  
+
   .link {
     padding: .5rem;
   }

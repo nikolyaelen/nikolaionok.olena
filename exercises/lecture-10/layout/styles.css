@@ -2,12 +2,19 @@ body {
     --padding: 5vw;
     --max-width: 180ch;
 }
-  
+  /*завдання №3 Налаштуйте елементи з класом card так, щоб вони пропорційно ділили між собою весь доступний простір
+                та мали базовий розмір, визначений змінною --min.*/
 .flexbox {
     --min: 30ch;
-  
+
     display: flex;
-    flex-wrap: wrap;
-  
+    /*flex-wrap: wrap;*/
+    justify-content: space-evenly;
+
     gap: 1rem;
+}
+.card {
+    min-width: var(--min);
+    width: var(--min);
+    flex-grow: 1;
 }
