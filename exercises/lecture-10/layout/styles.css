@@ -1,3 +1,6 @@
+:root {
+
+}
 body {
     --padding: 5vw;
     --max-width: 180ch;
@@ -8,13 +11,11 @@ body {
     --min: 30ch;
 
     display: flex;
-    /*flex-wrap: wrap;*/
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     gap: 1rem;
 }
 .card {
-    min-width: var(--min);
     width: var(--min);
-    flex-grow: 1;
 }
