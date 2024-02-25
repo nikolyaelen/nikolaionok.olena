@@ -1,0 +1,21 @@
+.grid {
+    --min: 30ch;
+
+    display: grid;
+    /*Встановіть автоматичну підгонку стовпчиків.*/
+    grid-auto-columns: var(--min);
+    grid-auto-flow: column;
+    gap: 1rem;
+}
+
+body {
+    --padding: 5vw;
+    --max-width: 180ch;
+}
+/*Налаштуйте grid-властивості так, щоб кожний елемент з класом card мав мінімальну ширину,
+що дорівнює 100% або var(--min), та максимальну ширину, що дорівнює мінімальній ширині або 1fr.*/
+.card {
+    min-width: var(--min, 100%);
+    max-width: min(100%, var(--min));
+}
+
