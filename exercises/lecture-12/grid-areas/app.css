@@ -22,3 +22,12 @@
 .footer {
     grid-area: footer;
 }
+@media (max-width: 786px) {
+    .grid-container {
+        grid-template-areas:
+            'header'
+            'sidebar'
+            'main'
+            'footer';
+    }
+}
