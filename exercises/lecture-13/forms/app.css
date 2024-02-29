@@ -1,0 +1,187 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+/*завдання №3 Визначте змінну під назвою --padding-form в області :root та призначте їй значення за допомогою функції calc().
+Значення обчислюється шляхом ділення 30 на 16 і множення на 1rem*/
+:root {
+    --form-color: #44c7f5;
+    --active-color: #ff574e;
+    --padding-form: calc(30 / 16 * 1rem);
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    background: lightgray;
+}
+/*завдання №4 Визначте такі властивості для класу .wrapper:*/
+.wrapper {
+    padding: var(--padding-form);
+    border: 2px solid; /*- зовнішні границі - однакові зліва/справа, однакові зверху/знизу*/
+    width: 100%; /*- ширина - 100% */
+    max-width: 70rem;/*- максимальна ширина - 70rem */
+    min-height: 100vh;/*- мінімальна висота - 100vh */
+    display: flex; /*- відображення - flex */
+    flex-direction: column;/*- спрямування - column*/
+    justify-content: center;/*- вирівнювання контенту - по центру*/
+    align-items: center;/*- вирівнювання елементів - по центру*/
+}
+/*завдання №5 Визначте такі властивості для класу .form-container:*/
+.form-container {
+    width: 100%; /*ширина - 100%*/
+    max-width: 40rem; /*максимальна ширина - 40rem*/
+    height: auto; /*висота - автоматична*/
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); /* радіус розмиття = 5px, колір = темно-сірий */
+    background-color: white; /*тло: біле*/
+    display: grid; /*відображення - grid*/
+    grid-template-columns: 1fr 1fr; /*шаблон розміру доріжок сітки - 2 колонки однакової ширини*/
+    grid-auto-flow: row; /*автоматичне розміщення елементів вздовж рядка*/
+    row-gap: 0.8em; /*жолоби між рядками сітки 0.8em*/
+    column-gap: 0.8em; /*жолоби між стовпцями сітки 0.8em*/
+}
+/*завдання №6 Визначте такі властивості для класів .col-left та .col-right:*/
+.col-left,
+.col-right {
+    display: flex; /*відображення - flex*/
+    padding: var(--padding-form); /*padding - значення змінної --padding-form*/
+}
+/*завдання №7 Визначте такі властивості для класу .col-left:*/
+.col-left {
+    background: var(--form-color);
+    clip-path: polygon(0 0, 0% 100%, 100% 0); /*clip-path - багатокутник. Починається у верхньому лівому куті елемента (0 0), нижній лівий кут (0% 100%), верхній правий кут (100% 0)*/
+}
+/*завдання №8 Змініть значення властивості padding, замінивши px на rem для класу .col-right:*/
+.col-right {
+    padding: 3.75rem 1.875rem;
+    margin-left: -10%;
+}
+
+.login-text {
+    position: relative;
+    width: 100%;
+    color: white;
+}
+
+.login-text h2 {
+    margin: 0 0 15px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.login-text p {
+    margin: 0 0 20px 0;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.login-text .btn {
+    display: inline-block;
+    padding: 7px 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 30px;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    background-color: var(--form-color);
+}
+
+.login-text .btn:hover {
+    color: var(--form-color);
+    background-color: white;
+}
+
+.login-form {
+    position: relative;
+    width: 100%;
+}
+
+.login-form h2 {
+    margin: 0 0 15px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.login-form p {
+    margin: 0 0 10px 0;
+    text-align: left;
+    font-size: .9rem;
+}
+
+.login-form p:last-child {
+    margin: 0;
+    padding-top: 3px;
+}
+
+.login-form p a {
+    color: var(--form-color);
+    font-size: .8rem;
+    text-decoration: none;
+}
+
+.login-form label {
+    display: block;
+    width: 100%;
+    margin-bottom: 2px;
+    letter-spacing: .5px;
+}
+
+.login-form p:last-child label {
+    width: 60%;
+    float: left;
+}
+
+.login-form label span {
+    color: var(--active-color);
+    padding-left: 2px;
+}
+
+.login-form input {
+    display: block;
+    width: 100%;
+    height: calc((35/16)*1rem);
+    padding: 0 10px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 30px;
+}
+/*завдання №9 Визначте обробку події фокус для селектора .login-form input,
+                що змінює колір рамки на значення --active-color */
+.login-form input:focus {
+    border-color: var(--active-color);
+}
+/*завдання №10 Визначте такі властивості для селектора .login-form input з типом submit: */
+.login-form input [type="submit"] {
+    display: inline-block; /*- display: inline-block; */
+    width: 100%;
+    margin-top: 5px;
+    color: var(--form-color);
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid var(--form-color);
+    border-radius: 30px;
+}
+/*завдання №11 Визначте обробку події hover для селектора .login-form input з типом submit,
+                що змінює його колір на білий та тло на значення --form-color:*/
+.login-form input [type="submit"]:hover {
+    color: white;
+    background-color: var(--form-color);
+}
+/*завдання №12 Створіть media-запит max-width: 35rem, що визначає наступне:*/
+@media(max-width: 35rem) {
+    .form-container {
+        flex-direction: column; /*для класу .form-container змінити flex-direction на column*/
+        box-shadow: none; /*відмінити властивість box-shadow*/
+    }
+    .col-left, .col-right {
+        width: 100%; /*для класів .col-left, .col-right змінити ширину на 100%*/
+        margin: 0; /*скинути зовнішні границі в 0*/
+        clip-path: none /*відмінити властивість clip-path*/;
+    }
+    .col-right {
+        padding: var(--padding-form); /*для класу .col-right встановити властивість у значення --padding-form*/
+    }
+}

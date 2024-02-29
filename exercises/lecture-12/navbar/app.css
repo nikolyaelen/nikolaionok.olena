@@ -71,6 +71,8 @@ nav {
 .navbar a {
     margin-left: 1em;
 }
+/*Створіть "Mobile First" media-запит, що змінює макет navbar з горизонтального
+    меню нв вертикальне меню при переході через контрольну точку 800px.*/
 @media (max-width: 800px) {
     .navbar {
         display: flex;
