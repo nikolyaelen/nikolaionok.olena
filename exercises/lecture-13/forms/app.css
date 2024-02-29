@@ -153,7 +153,7 @@ body {
     border-color: var(--active-color);
 }
 /*завдання №10 Визначте такі властивості для селектора .login-form input з типом submit: */
-.login-form input [type="submit"] {
+.login-form input[type="submit"] {
     display: inline-block; /*- display: inline-block; */
     width: 100%;
     margin-top: 5px;
