@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+<script>
+
+    //завдання №1 Визначити результат наступних логічних виразів:
+        let x = 3
+        let y = 4
+
+        x == 3 //true
+        x === "3" //false
+        x!=5 //true
+        x!== "5" //true
+        X!== 3 //false
+        y > 5 //false
+        y >= 3 //true
+        y < 5 //true
+        y <= 2 //false
+        1 == true //true
+        null == undefined //true
+        NaN == NaN //false
+
+//---------------------------------------------------------------------------------------------------------
+    //завдання №2 Визначити результат наступних логічних виразів:
+        let x = 3;
+        let y = 4;
+        let z = 5;
+        
+        x ||= y; // х=3             (x присвоюється значення y, тільки якщо х буде: undefined, null, false, 0, NaN, '')
+        x || (y = z); // у=4        (у буде не змінена) 
+        x &&= y; //у=4, х=4         (х присвоюється значення у, тому що х не має значень: undefined, null, false, 0, NaN, '')
+        x && (y = z); //у=5         (буде виконано присвоювання, бо х :не null, undefined, 0, false, NaN, ''
+        x ??= y; // х=3,            (не буде присвоєне у, тому що х не undefined, null)
+        x ?? (y = z); // x=3,y=4    (тільки якщо х буде: undefined, null, ліва частііина буде замінена правою)
+    
+//---------------------------------------------------------------------------------------------------------
+    //завдання №3 Напишіть програму, що пропонує користувачеві вгадати якесь число, наприклад 3.
+        let numProg = 3;
+        let message;
+            var numUse = prompt("Guess the number from 0 to 10", "");
+                if(numProg==numUse){
+                message = 'Congratulations, You did it!'
+                }
+                if(numProg<numUse){
+                message = 'The number is too long'
+                }
+                if(numProg>numUse){
+                message = 'The number is short'
+                }
+            alert(message);
+    
+//---------------------------------------------------------------------------------------------------------
+    /* завдання №4 Напишіть програму, що пропонує користувачеві ввести назву дня тижня, наприклад - Понеділок.
+                Якщо користувач ввів Понеділок або Monday, вивести повідомлення "Start of the work week!"
+                Якщо користувач ввів П'ятниця або Friday, вивести повідомлення "End of the work week!"
+                В інших випадках вивести повідомлення "A regular day"*/
+        let day = prompt("Назвіть день тиждня:", "");
+        
+        let message =
+            day.toLowerCase() === "понеділок" || day.toLowerCase() === "monday" ? "Start of the work week!"
+            : day.toLowerCase() === "п'ятниця" || day.toLowerCase() === "friday" ? "End of the work week!" 
+            : "A regular day";
+
+        alert(message);
+      
+//---------------------------------------------------------------------------------------------------------
+    // завдання №5 Напишіть версію програми, застосовуючи оператор if else
+        let day = prompt("Назвіть день тиждня:", "");
+
+        if(day.toLowerCase() === "понеділок" || day.toLowerCase() === "monday"){
+            alert("Start of the work week!");
+        }
+        else if(day.toLowerCase() === "п'ятниця" || day.toLowerCase() === "friday"){
+            alert("End of the work week!");
+        }else{
+            alert("A regular day");
+        }
+        
+//---------------------------------------------------------------------------------------------------------
+    // завдання №6 Напишіть версію програми, застосовуючи оператор switch
+        let day = prompt("Name the day of the week:", "");
+        switch (day.toLowerCase()){
+            case "monday":
+            case "понеділок":
+                console.log("Start of the work week!");
+                break;
+            case "friday":
+            case "п'ятниця":   
+                console.log("End of the work week!");
+                break;
+            default:
+                console.log("A regular day");
+        }
+    
+//---------------------------------------------------------------------------------------------------------
+    /* За результатами іспиту студент набирає певну кількість балів, що зберігається в змінній score.
+        Напишіть програму, що аналізує значення score та призначає студенту ступінь grade за таким алгоритмом:
+        Якщо студент набрав менше 50 балів, призначити йому ступінь 'F'
+        Якщо студент набрав менше 70 балів, призначити йому ступінь 'D'
+        Якщо студент набрав менше 80 балів, призначити йому ступінь 'C'
+        Якщо студент набрав менше 90 балів, призначити йому ступінь 'B'
+        В іншому випадку призначити йому ступінь 'A'*/
+    
+     //Напишіть версію програми, застосовуючи оператор if else:
+        let grade;
+            var score = prompt("Введіть кількість балів:", "");
+                if(score<50){
+                    grade = 'F'
+                }
+                else if(score<70){
+                    grade = 'D'
+                }
+                else if(score<80){
+                    grade = 'C'
+                }
+                else if(score<90){
+                    grade = 'B'
+                }
+                else {
+                    grade = 'A'
+                }
+        alert("Згідно ваших балів, у  Вас ступінь: "+grade);
+    
+//---------------------------------------------------------------------------------------------------------
+    //Напишіть версію програми, застосовуючи тернарний оператор:
+        var score = prompt("Введіть кількість балів:", "");
+        
+        let grade =
+            score < 50 ? 'F'
+            : score < 70 ? 'D'
+            : score < 80 ? 'C'
+            : score < 90 ? 'B'
+            : "A";
+
+        alert("Згідно ваших балів, у  Вас ступінь: "+grade)
+        
+//---------------------------------------------------------------------------------------------------------
+    // завдання: Виправити помилку у наступному коді:
+        let firstName = null;
+        let lastName = undefined;
+        let username = firstName || lastName || "Guest";
+
+        console.log(username); // "Guest"
+
+
+</script>
+
+</body>
+</html>
