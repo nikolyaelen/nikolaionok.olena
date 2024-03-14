@@ -145,7 +145,7 @@
     // завдання: Виправити помилку у наступному коді:
         let firstName = null;
         let lastName = undefined;
-        let username = firstName || lastName || "Guest";
+        let username = (firstName || lastName) ?? "Guest";
 
         console.log(username); // "Guest"
 
