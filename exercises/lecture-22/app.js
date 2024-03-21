@@ -59,7 +59,7 @@ const classes = ['first', 'second', 'third', 'fourth'];
 //-------------------------------------------------------------------
 
 // завдання 8. Знайти колекцію всіх елементів з селектором '.container header', зберегти її в змінній headers.
-       /* const headers = document.querySelectorAll('.container header');
+        /*const headers = document.querySelectorAll('.container header');
 
     // Використовуючи цикл for для отриманої колекції headers, замінити заголовки h1 таким чином
     // перший залишити h1
@@ -114,16 +114,16 @@ const classes = ['first', 'second', 'third', 'fourth'];
             // Встановлюємо відповідний клас залежно від типу заголовка
             switch (headerType) {
                 case 'h1':
-                    header.classList.add('first');
+                    header.classList.add(classes[0]);
                     break;
                 case 'h2':
-                    header.classList.add('second');
+                    header.classList.add(classes[1]);
                     break;
                 case 'h3':
-                    header.classList.add('third');
+                    header.classList.add(classes[2]);
                     break;
                 case 'h4':
-                    header.classList.add('fourth');
+                    header.classList.add(classes[3]);
                     break;
                 default:
                     break; //Якщо заголовок не є жодним з очікуваних типів, не додаємо клас
