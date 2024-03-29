@@ -12,7 +12,7 @@
 //-----------------------------------------------------------------------
 
 // Завдання 2. Маємо масив кольорів:
-        /*const colors = ['blue', 'green', 'white'];
+        const colors = ['blue', 'green', 'white'];
 // Визначити функцію зворотного виклику під назвою "iterate", яка приймає два параметри: "item" та "index".
 // Функція повинна видавати повідомлення на консоль за допомогою шаблонних літералів.
 // Повідомлення має містити значення «item» і значення «index» - ${item} has index ${index}.
@@ -20,17 +20,16 @@
         function iterate(item, index) {
             console.log(`${item} has index ${index}`);
         }
-        colors.forEach(iterate);*/
+        colors.forEach(iterate);
 // Перепишіть функцію iterate, використовуючи масив colors, таким чином, щоб на консоль видавалось повідомлення 'The last iteration!',
 // коли функція виконує останню ітерацію для елементів colors.
-        /*function iterate(item, index) {
-            if (index!==colors.length -1) {
-                console.log(`${item} has index ${index}`);
-            } else {
-                console.log(`${item} has index ${index} The last iteration! `);
+        function iterate(item, index, array) {
+            console.log(item);
+            if (index === array.length - 1) {
+                console.log('The last iteration!');
             }
         }
-        colors.forEach(iterate);*/
+        colors.forEach(iterate);
 //-----------------------------------------------------------------------
 
 // Завдання 3. Маємо масив letters

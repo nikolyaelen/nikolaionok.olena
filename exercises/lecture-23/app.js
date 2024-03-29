@@ -73,29 +73,19 @@ dangerButton.addEventListener('focusout', handleFocusOut);
 // Якщо ввімкнено режим dark-mode, показати кнопку btn-light та сховати кнопку dark-mode,
 // і навпаки, якщо вимкнено режим dark-mode, показати кнопку btn-dark та сховати кнопку btn-light
 
-var darkButton = document.querySelector('.btn-dark');
-var lightButton = document.querySelector('.btn-light');
-
 function toggleMode() {
-    document.body.classList.toggle('dark-mode'); // Перемикаємо клас "dark-mode" у елемента document.body
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+    btnDark.classList.toggle("hide");
+    btnLight.classList.toggle("hide");
+}
+const btnDark = document.querySelector('.btn-dark');
+const btnLight = document.querySelector('.btn-light');
 
-    if (document.body.classList.contains('dark-mode')) { // Перевіряємо, чи увімкнено режим dark-mode
-        darkButton.style.visibility = 'hidden'; // Якщо увімкнено, приховуємо кнопку btn-dark
-        lightButton.style.visibility = 'visible'; // Показываем кнопку btn-light
-    } else {
-        lightButton.style.visibility = 'hidden'; // Якщо вимкнено, приховуємо кнопку btn-light
-        darkButton.style.visibility = 'visible'; // Показуємо кнопку btn-dark
-    }
-}
-// початковий стан кнопок відповідно до поточного режиму сторінки
-if (document.body.classList.contains('dark-mode')) {
-    darkButton.style.visibility = 'hidden';
-} else {
-    lightButton.style.visibility = 'hidden';
-}
-// Призначаємо обробник події click на кнопку btn-dark та btn-light
-darkButton.addEventListener('click', toggleMode);
-lightButton.addEventListener('click', toggleMode);
+btnLight.classList.toggle("hide");
+
+btnDark.addEventListener("click", toggleMode);
+btnLight.addEventListener("click", toggleMode);
 //----------------------------------------------------------------------------------------------
 
 // завдання 6. Знайти на сторінці кнопку з класом btn-info.

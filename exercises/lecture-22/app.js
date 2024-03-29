@@ -42,9 +42,8 @@ const classes = ['first', 'second', 'third', 'fourth'];
 // завдання 6. Знайти всі елементи з класом container.
         const cont = document.querySelectorAll('.container');
     // Використовуючи цикл for, вивести на консоль перший елемент для кожного зі знайдених елементів.
-        for (let i = 0; i < cont.length; i++) {
-            const firstElement = cont[i].querySelector(':first-child'); // Отримати перший елемент усередині поточного контейнера
-            console.log(firstElement); // вивести на консоль перший елемент для кожного зі знайдених елементів
+        for (let i = 0; i < containers.length; i++) {
+                console.log(containers[i].firstElementChild);
         }
 //-------------------------------------------------------------------
 
