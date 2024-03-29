@@ -20,8 +20,8 @@ function multiply(n1, n2) {
 }*/
 // Зробити calculate() функцією вищого порядку, змусивши її підтримувати операцію додавання над масивом чисел та операцію множення над масивом чисел
 // calculate(operation, initialValue, numbers) приймає перший аргумент - функцію, яка описує операцію, другий аргумент - початкове значення, третій аргумент - масив чисел.
-//calculate(sum, 0, [1, 2, 4]); // => 7
-//calculate(multiply, 1, [1, 2, 4]); // => 8
+//calculate(sum, 0, [1, 2, 4]); // 7
+//calculate(multiply, 1, [1, 2, 4]); // 8
 
 // ----------виконання завдання:
 /*function calculate(operation, initialValue, numbers) {
@@ -37,58 +37,61 @@ function sum(n1, n2) {
 function multiply(n1, n2) {
     return n1 * n2;
 }
-console.log(calculate(sum, 0, [1, 2, 4]));      // Возвращает: 7
-console.log(calculate(multiply, 1, [1, 2, 4])); // Возвращает: 8 */
+console.log(calculate(sum, 0, [1, 2, 4]));      // повертає: 7
+console.log(calculate(multiply, 1, [1, 2, 4])); // повертає: 8 */
 //-----------------------------------------------------------------------------------
 
 // завдання 2. Маємо масив student_names
 /*let student_names = ["Wick", "Malcolm", "Smith"]
+
 // Застосувати до масиву student_names метод map, щоб отримати на консолі результат у такому вигляді:
 // name: Wick | index: 0 | array: [ "Wick", "Malcolm", "Smith" ] name: Malcolm | index: 1 | array: [ "Wick", "Malcolm", "Smith" ] name: Smith | index: 2 | array: [ "Wick", "Malcolm", "Smith" ]
+
+//----------виконання:
 const result = student_names.map((name, index, array) => {
     const arrayString = "[" + array.join(", ") + "]";
     return `name: ${name} | index: ${index} | array: ${arrayString}`;
 });
-
 result.forEach(item => console.log(item)); */
 //-----------------------------------------------------------------------------------
 
 // Завдання 3. Маємо масив об'єктів students_information, що представляє результати іспитів кожного студента у полі degree:
-
-// Максимальна оцінка degree = 600 Розрахувати відсоткове значення отриманої оцінки по кожному студенту, використовуючи метод map, та вивести на консоль отриманий результат у такому вигляді:
-// { name: "Wick", degree: 375, percentage: 62.5 } { name: "Malcolm", degree: 405, percentage: 67.5 } { name: "Smith", degree: 453, percentage: 75.5 }​
 /*let students_information = [
     {"name": "Wick", "degree": 375},
     {"name": "Malcolm", "degree": 405},
     {"name": "Smith", "degree": 453},
 ];
 
-const maxDegree = 600; // Максимальная оценка
+// Максимальна оцінка degree = 600 Розрахувати відсоткове значення отриманої оцінки по кожному студенту, використовуючи метод map, та вивести на консоль отриманий результат у такому вигляді:
+// { name: "Wick", degree: 375, percentage: 62.5 } { name: "Malcolm", degree: 405, percentage: 67.5 } { name: "Smith", degree: 453, percentage: 75.5 }​
+
+const maxDegree = 600; // Максимальна оцінка
 
 const result = students_information.map(student => {
     const percentage = (student.degree / maxDegree) * 100;
     return { name: student.name, degree: student.degree, percentage: percentage };
 });
 
-result.forEach(item => console.log(item));*/
+result.forEach(item => console.log(item)); */
 //-----------------------------------------------------------------------------------
 
 // Завдання 4. Маємо масив :
 //[1, 2, 3, [10, 11, 12], 21, 22, 23, [31, 32, 33, 34], [41, 42]];
 // Використовуючи метод reduce, звести масив до одномірного
 //[ 1, 2, 3, 10, 11, 12, 21, 22, 23, 31, 32, 33, 34, 41, 42 ]
+
 //---------виконання:
 /*const multiDimArray = [1, 2, 3, [10, 11, 12], 21, 22, 23, [31, 32, 33, 34], [41, 42]];
 
 const flattenedArray = multiDimArray.reduce((accumulator, currentElement) => {
-    // Если текущий элемент - это массив, добавляем его элементы в аккумулятор
+    // Якщо поточний елемент - це масив, додаємо його елементи до акумулятора
     if (Array.isArray(currentElement)) {
         return accumulator.concat(currentElement);
     } else {
-        // Если текущий элемент не является массивом, добавляем его в аккумулятор
+        // Якщо поточний елемент не є масивом, додаємо його до акумулятора
         return accumulator.concat(currentElement);
     }
-}, []);//         [] т е начинаем с пустого списка
+}, []);// [] - починаємо з порожнього списку
 
 console.log(flattenedArray); // Выводит: [1, 2, 3, 10, 11, 12, 21, 22, 23, 31, 32, 33, 34, 41, 42] */
 //-----------------------------------------------------------------------------------
@@ -102,12 +105,12 @@ console.log(flattenedArray); // Выводит: [1, 2, 3, 10, 11, 12, 21, 22, 23
     }
 };
 
-// Создаем функцию myFunc(), которая использует метод upperCase()
+// Створюємо функцію myFunc(), яка використовує метод upperCase()
 function myFunc() {
     let arr = ["Algorithm", "Data Structure", "Operating System", "html"];
     arr.upperCase();
     console.log(arr);
 }
 
-myFunc(); // Выводит: [ 'ALGORITHM', 'DATA STRUCTURE', 'OPERATING SYSTEM', 'HTML' ] */
+myFunc(); // маємо: [ 'ALGORITHM', 'DATA STRUCTURE', 'OPERATING SYSTEM', 'HTML' ] */
 
