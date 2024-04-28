@@ -1,0 +1,29 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: yellow;
+    padding: 10px;
+  }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+li {
+  margin-right: 100px;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+li a:hover {
+  color: blue;
+}
+
+  
